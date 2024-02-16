@@ -1,6 +1,6 @@
 # ADT Chocolademelk (gemaakt door Tom)
 class Chocolademelk:
-    maxId = 0
+    idcounter = 0
 
     def __init__(self):
         """
@@ -9,10 +9,11 @@ class Chocolademelk:
         preconditie: niets
         postconditie: een Chocolademelk object is geïnitialiseerd
         """
-        self.id = Chocolademelk.maxId
+        self.id = Chocolademelk.idcounter
         self.credits = 5
         self.prijs = 2
-        Chocolademelk.maxId += 1
+
+        Chocolademelk.idcounter += 1
 
     def addShot(self, chocoladeshot):
         """

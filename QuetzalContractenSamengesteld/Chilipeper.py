@@ -1,15 +1,18 @@
 #ADT chilipeper (combinatie Jasper/Jeremi)
 class Chilipeper:
-    def __init__(self, id):
+    idcounter = 0
+
+    def __init__(self):
         """
         Constructor voor een Chilipeper object.
 
         :param id: Uniek identificatienummer van de chilipeper.
         """
-        self.id = id
+        self.id = Chilipeper.idcounter
         self.prijs = 0.25
         self.vervaldatum = None
 
+        Chilipeper.idcounter += 1
 
     def setVervaldatum(self, date):
         """

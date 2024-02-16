@@ -1,16 +1,20 @@
 #ADT chocoladeshot (combinatie Jasper/Jeremi)
 class Chocoladeshot:
-    def __init__(self, id):
+    idcounter = 0
+
+    def __init__(self):
         """
         Constructor voor een Chocoladeshot object.
         Het initialiseert de chocoladeshot met een uniek ID en standaardwaarden voor type, prijs en vervaldatum.
 
         :param id: Uniek identificatienummer van de chocoladeshot.
         """
-        self.id = id  # Het unieke ID voor de chocoladeshot.
+        self.id = Chocoladeshot.idcounter  # Het unieke ID voor de chocoladeshot.
         self.type = None  # Type van de chocoladeshot, bijvoorbeeld WIT, MELK, BRUIN, ZWART.
         self.prijs = 1  # Standaardprijs van de chocoladeshot.
         self.vervaldatum = None  # Vervaldatum van de chocoladeshot.
+
+        Chocoladeshot.idcounter += 1
 
     def setVervaldatum(self, date):
         """

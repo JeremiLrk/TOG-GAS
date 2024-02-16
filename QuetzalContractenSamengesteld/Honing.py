@@ -1,7 +1,9 @@
 #ADT honing (combinatie Jasper/Jeremi)
 
 class Honing:
-    def __init__(self, id):
+    idcounter = 0
+
+    def __init__(self):
         """
         Constructor voor een Honing object.
         Het initialiseert de honing met een uniek ID en standaardwaarden voor prijs en vervaldatum.
@@ -11,6 +13,8 @@ class Honing:
         self.id = id  # Het unieke ID voor de honing.
         self.prijs = 0.50  # Standaardprijs van de honing.
         self.vervaldatum = None  # Vervaldatum van de honing.
+
+        Honing.idcounter += 1
 
     def setVervaldatum(self, date):
         """

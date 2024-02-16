@@ -1,15 +1,19 @@
 #ADT gebruiker (gemaakt door Jeremi)
 class Gebruiker:
-    def __init__(self, id):
+    idcounter = 0
+
+    def __init__(self):
         """
         Constructor voor een Gebruiker object.
 
         :param id: Uniek identificatienummer van de gebruiker.
         """
-        self.id = id  # Het unieke ID voor de gebruiker.
+        self.id = Gebruiker.idcounter  # Het unieke ID voor de gebruiker.
         self.voornaam = None  # Voornaam van de gebruiker.
         self.achternaam = None  # Achternaam van de gebruiker.
         self.emailadres = None  # E-mailadres van de gebruiker.
+
+        Gebruiker.idcounter += 1
 
     def setNaam(self, voornaam, achternaam):
         """

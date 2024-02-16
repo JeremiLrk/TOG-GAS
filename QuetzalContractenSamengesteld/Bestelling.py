@@ -1,16 +1,20 @@
 # ADT Chocolademelk (gemaakt door Jeremi)
 class Bestelling:
-    def __init__(self, id, timestamp):
+    idcounter = 0
+
+    def __init__(self, timestamp):
         """
         Constructor voor een Bestelling object.
 
         :param id: Uniek identificatienummer van de bestelling.
         """
-        self.id = id  # Het unieke ID voor de bestelling.
+        self.id = Bestelling.idcounter  # Het unieke ID voor de bestelling.
         self.gebruikersid = None  # ID van de gebruiker die de bestelling plaatst.
         self.timestamp = timestamp  # Tijdstip van de bestelling.
         self.chocolademelkid = None  # ID van de bestelde chocolademelk.
         self.afgehaald = False  # Status van afhaling van de bestelling.
+
+        Bestelling.idcounter += 1
 
     def setGebruiker(self, gebruikersid):
         """

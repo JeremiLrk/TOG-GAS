@@ -1,16 +1,18 @@
 #ADT honing (combinatie Jasper/Jeremi)
 
 class Marshmallow:
-    def __init__(self, id):
+    idcounter = 0
+    
+    def __init__(self):
         """
         Constructor voor een Marshmallow object.
         Het initialiseert de marshmallow met een uniek ID en standaardwaarden voor prijs en vervaldatum.
-
-        :param id: Uniek identificatienummer van de marshmallow.
         """
-        self.id = id  # Het unieke ID voor de marshmallow.
+        self.id = Marshmallow.idcounter  # Het unieke ID voor de marshmallow.
         self.prijs = 0.75  # Standaardprijs van de marshmallow.
         self.vervaldatum = None  # Vervaldatum van de marshmallow.
+
+        Marshmallow.idcounter += 1
 
     def setVervaldatum(self, date):
         """
@@ -20,7 +22,7 @@ class Marshmallow:
         """
         pass
 
-    def isSpoiled(self):
+    def isVervallen(self):
         """
         Controleert of de marshmallow vervallen is.
 

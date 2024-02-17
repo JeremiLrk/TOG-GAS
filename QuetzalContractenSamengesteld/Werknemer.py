@@ -1,16 +1,19 @@
 # ADT Werknemer (gemaakt door Jeremi)
 
 class Werknemer:
-    def __init__(self, id, Workload):
+    idcounter = 0
+    
+    def __init__(self, Workload):
         """
         Constructor voor een Werknemer object.
 
-        :param id: Uniek identificatienummer van de werknemer.
         """
-        self.id = id  # Het unieke ID voor de werknemer.
+        self.id = Werknemer.idcounter  # Het unieke ID voor de werknemer.
         self.voornaam = None  # Voornaam van de werknemer.
         self.achternaam = None  # Achternaam van de werknemer.
         self.workload = Workload  # Workload van de werknemer uitgedrukt in credits.
+
+        Werknemer.idcounter += 1
 
     def setNaam(self, voornaam, achternaam):
         """

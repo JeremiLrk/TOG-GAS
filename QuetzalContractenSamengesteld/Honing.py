@@ -7,10 +7,8 @@ class Honing:
         """
         Constructor voor een Honing object.
         Het initialiseert de honing met een uniek ID en standaardwaarden voor prijs en vervaldatum.
-
-        :param id: Uniek identificatienummer van de honing.
         """
-        self.id = id  # Het unieke ID voor de honing.
+        self.id = Honing.idcounter  # Het unieke ID voor de honing.
         self.prijs = 0.50  # Standaardprijs van de honing.
         self.vervaldatum = None  # Vervaldatum van de honing.
 
